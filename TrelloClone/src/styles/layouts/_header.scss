@@ -1,0 +1,35 @@
+.home-header {
+  position: fixed;
+  height: 72px;
+  z-index: 1;
+  width: 100%;
+  background-color: #0079bf;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__home-link img {
+    height: 40px;
+  }
+
+  &__login {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 17px;
+    margin-right: 20px;
+  }
+
+  &__register {
+    color: #5067c5;
+    background: #fff;
+    font-weight: 700;
+    font-size: 17px;
+    padding: 6px 10px;
+    text-decoration: none;
+    border-radius: 3px;
+    line-height: 26px;
+  }
+  
+}

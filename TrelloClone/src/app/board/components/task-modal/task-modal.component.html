@@ -1,0 +1,52 @@
+<div class="task-modal-container" *ngIf="data$ | async as data">
+  <div class="task-modal-header">
+    <inline-form
+      class="task-modal-edit-title-form"
+      [defaultText]="data.task.title"
+      [title]="data.task.title"
+      (handleSubmit)="updateTaskName($event)"
+    ></inline-form>
+    <img
+      src="/assets/close_icon.svg"
+      class="task-modal-close"
+      (click)="goToBoard()"
+    />
+  </div>
+  <div class="task-modal-body">
+    <div>
+      <form class="column-select-container" [formGroup]="columnForm">
+        <select formControlName="columnId" class="column-select">
+            <option *ngFor="let column of data.columns" [ngValue]="column.id">
+                {{column.title}}
+            </option>
+        </select>
+      </form>
+      <div class="task-modal-description">
+        <div class="task-modal-description-label">Description</div>
+        <inline-form
+          class="task-modal-edit-description-form"
+          [defaultText]="data.task.description || 'Add detailed description to specify what task you are getting at!'"
+          [title]="data.task.description || ''"
+          [hasButton]="true"
+          buttonText="Save"
+          (handleSubmit)="updateTaskDesc($event)"
+        ></inline-form>
+      </div>
+    </div>
+    <div class="task-modal-actions">
+      <div class="task-modal-actions-label">Action</div>
+      <div>
+        <div class="task-modal-actions-action">
+          <img
+            src="../../../../assets/trash.svg"
+            class="task-modal-actions-icon"
+
+            (click)="deleteTask()"
+          />
+          Delete
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="task-modal-backdrop"></div>

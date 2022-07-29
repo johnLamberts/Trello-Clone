@@ -1,0 +1,59 @@
+.home-hero {
+  background: linear-gradient(135deg, #0079bf, #5067c5);
+
+  &__container {
+    max-width: 1140px;
+    color: #fff;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    padding-bottom: 80px;
+    padding-top: 80px;
+    justify-content: space-between;
+  }
+
+  &--title {
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  &--description {
+    font-size: 25px;
+    font-weight: 300;
+  }
+}
+
+
+.team-container {
+    color: #2c3e50;
+  }
+
+  .information-container {
+    color: #2c3e50;
+  }
+  
+  .workflow-container {
+    color: #2c3e50;
+
+    ul li {
+      // list-style-type: none;
+      margin: 10px;
+      margin-left: 8px;
+    }
+  }
+  
+  .team-image {
+    max-width: 700px;
+  }
+  
+  .workflow-image {
+    max-width: 450px;
+  }
+  
+  .workflow-left-part {
+    margin-right: 40px;
+  }
+
+
+  
